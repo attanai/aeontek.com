@@ -1,106 +1,16 @@
-<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<head>
 
 <title>What We Do</title>
 
 
-
-<style type="text/css">
-body, div, p, blockquote, ol, ul, dl, li, dt, dd, td {  font-family: Verdana, Arial, sans-serif; font-size: 16px; font-weight: 400; color: #FFFFFF}
-b, strong {  font-weight: 900 }
-
-
-
-a { color: #FFFFFF; text-decoration: none;}
-a:hover { color: #FFFFFF; text-decoration: none; background-color:#001144}
-
-
-
-.tb2 {
-	background-color : #252033;
-	border: 1px solid #555555;
-	color: #FFFFFF;
-}
-
-#t1 {
-margin:0 auto;
-background-color : #111122;
-border: 3px solid #001144;
-}
-</style>
-
-<script type="text/javascript">
-  var TimeToFade = 2000.0;
- 
-function fade(eid)
- {
-   var element = document.getElementById(eid);
-   if(element == null)
-     return;
-    
-   if(element.FadeState == null)
-   {
-     if(element.style.opacity == null 
-        || element.style.opacity == '' 
-        || element.style.opacity == '1')
-     {
-       element.FadeState = 2;
-     }
-     else
-     {
-       element.FadeState = -2;
-     }
-   }
-     
-  if(element.FadeState == 1 || element.FadeState == -1)
-   {
-     element.FadeState = element.FadeState == 1 ? -1 : 1;
-     element.FadeTimeLeft = TimeToFade - element.FadeTimeLeft;
-   }
-   else
-   {
-     element.FadeState = element.FadeState == 2 ? -1 : 1;
-     element.FadeTimeLeft = TimeToFade;
-     setTimeout("animateFade(" + new Date().getTime() + ",'" + eid + "')", 33);
-   }  
-
- }
- function animateFade(lastTick, eid)
- {  
-   var curTick = new Date().getTime();
-   var elapsedTicks = curTick - lastTick;
-   
-  var element = document.getElementById(eid);
-  
-   if(element.FadeTimeLeft <= elapsedTicks)
-   {
-     element.style.opacity = element.FadeState == 1 ? '1' : '0';
-     element.style.filter = 'alpha(opacity = ' 
-        + (element.FadeState == 1 ? '100' : '0') + ')';
-     element.FadeState = element.FadeState == 1 ? 2 : -2;
-     return;
-   }
-  
-   element.FadeTimeLeft -= elapsedTicks;
-   var newOpVal = element.FadeTimeLeft/TimeToFade;
-   if(element.FadeState == 1)
-     newOpVal = 1 - newOpVal;
- 
-  element.style.opacity = newOpVal;
-   element.style.filter = 'alpha(opacity = ' + (newOpVal*100) + ')';
-   
-  setTimeout("animateFade(" + curTick + ",'" + eid + "')", 33);
-
- }
-</script>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script type="text/javascript" src="fade.js"> </script>
 
 </head><body onload="fade('fadeBlock');  setTimeout('fade(fadeBlock)',2000); fade('fadeBlockb');  setTimeout('fade(fadeBlockb)',4000);" bgcolor="#000000" leftmargin=0 topmargin=0 marginwidth=0 marginheight=0><div>
   <div align="center">
   
   
 	
-
-
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
 
 
