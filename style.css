@@ -15,11 +15,15 @@ font-weight: 900;
 }
 
 .copyright{
-font-size: 12px;
+opacity:1;
 text-align: center;
 vertical-align: text-bottom;
 position: absolute;
-color: #FFFFFF;
+bottom: 0;
+right: 25;
+width:100%;
+background:rgba(255,255,255,0.0);
+font-size: 12pt;
 }
 
 a {
@@ -31,6 +35,32 @@ a:hover {
 color: #FFFFFF;
 text-decoration: none;
 background-color:#001144;
+}
+
+
+
+#Header{
+opacity: 1;
+position: relative;
+height: 15%;
+text-align: Left;
+vertical-align: middle;
+}
+
+#HeaderLogo{
+width:40%;
+border: 0;
+position: absolute;
+}
+
+#HeaderText{
+text-align: right;
+font-size: 12pt;
+position: absolute;
+right: 0;
+top: 30%;
+vertical-align: middle;
+background:rgba(255,255,255,0.0);
 }
 
 #LogoArea{
@@ -69,6 +99,28 @@ background:rgba(255,255,255,0.0);
 }
 
 #TextArea ul li{
+display: inline-block;
+background:rgba(255,255,255,0.0);
+}
+
+#services{
+opacity:0;
+text-align: center;
+vertical-align: text-bottom;
+position: absolute;
+bottom: 10%;
+right: 25;
+width:100%;
+background:rgba(255,255,255,0.0);
+}
+
+#services ul{
+vertical-align: text-bottom;
+list-style-type: none;
+background:rgba(255,255,255,0.0);
+}
+
+#services ul li{
 display: inline-block;
 background:rgba(255,255,255,0.0);
 }

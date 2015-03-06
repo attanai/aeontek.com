@@ -15,24 +15,9 @@ function fadeIn(el, time)
 
   tick();
 }
-/*
-function pauseFade(el, time, pauseTime)
-{
-	sleep(pauseTime);
-	fadein(el, time),
-}
-
-function sleep(miliseconds) {
-           var currentTime = new Date().getTime();
-
-           while (currentTime + miliseconds >= new Date().getTime()) {
-           }
-       }
-*/
 function FrontPageLoad()
 {
 	fadeIn(LogoArea, 1500);
-	/*paseFade(TextArea, 1500, 1500);*/
 	fadeIn(TextArea, 4000);
 	
 }
