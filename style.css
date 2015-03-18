@@ -1,5 +1,12 @@
 html{
 overflow: hidden;
+height: 100%;
+width: 100%;
+}
+
+body{
+height: 100%;
+width: 100%;
 }
 
 body, div, p, blockquote, ol, ul, dl, li, dt, dd, td {
@@ -10,8 +17,13 @@ color: #FFFFFF;
 background-color: #000000;
 }
 
+
 b, strong {
 font-weight: 900;
+}
+
+.LinkSeparatorB {
+visibility: hidden;
 }
 
 .copyright{
@@ -37,29 +49,59 @@ text-decoration: none;
 background-color:#001144;
 }
 
-
+#HeaderPlaceholder{
+height: 180px;
+}
 
 #Header{
 opacity: 1;
 position: relative;
-height: 15%;
+height: 100%;
 text-align: Left;
 vertical-align: middle;
 }
 
 #HeaderLogo{
-width:40%;
+width: 650px;
 border: 0;
+left: 0;
+right: 0;
+margin: auto;
 position: absolute;
 }
 
 #HeaderText{
-text-align: right;
-font-size: 12pt;
-position: absolute;
+position: relative;
+height: 100%;
+top: -20;
+bottom: 0;
+left: 370;
 right: 0;
-top: 30%;
+margin: auto;
+background:rgba(255,255,255,0.0);
+overflow: none;
+display: table;
+}
+
+#HeaderTextInner{
+height: 100%;
+display: table-cell;
 vertical-align: middle;
+background:rgba(255,255,255,0.0);
+}
+
+#HeaderText ul li{
+text-align: center;
+font-size: 20px;
+list-style-type: none;
+background:rgba(255,255,255,0.0);
+display: block;
+}
+
+#HeaderText ul{
+top: 0;
+bottom: 0;
+margin: auto;
 background:rgba(255,255,255,0.0);
 }
 
@@ -126,17 +168,50 @@ background:rgba(255,255,255,0.0);
 }
 
 
+@media (max-width: 1000px) {
+	
+	#HeaderText{
+	bottom: 0;
+	left: -20;
+	right: 0;
+	margin: auto;
+	top: 70px;
+	width: 340px;
+	text-align: center;
+	}
+	
+	#HeaderText ul li{
+	display: inline-block;
+	}
+	
+	.LinkSeparatorB {
+    visibility: visible;
+	}
+	
+}
+
+
 @media (max-width: 900px) {
 	body, div, p, blockquote, ol, ul, dl, li, dt, dd, td {
 	font-size: 24px;
 	}
+	
+
+	
 }
 
 
 @media (max-width: 600px) {
+	#HeaderLogo{
+	width: 300px;
+	}
+	
 	.LinkSeparator {
     visibility: hidden;
 	}
+	
+	
+
 	
 	#TextArea ul li{
 	display: block;
@@ -145,6 +220,9 @@ background:rgba(255,255,255,0.0);
 	}
 	#logo{
 	bottom: 50%;
+	}
+	#HeaderText{
+	top: 8%;
 	}
 }
 
