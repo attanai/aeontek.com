@@ -374,8 +374,8 @@ visibility: hidden;
 	visibility: hidden;
 	}
 }
-
-@media (max-device-height: 300px){
+/*
+@media (max-height: 400px){
 
 	body, div, p, blockquote, ol, ul, dl, li, dt, dd, td {
 	font-size: 24px;
@@ -424,3 +424,4 @@ visibility: hidden;
 	visibility: visible;
 	}
 }
+*/
